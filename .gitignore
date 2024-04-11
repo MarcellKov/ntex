@@ -1,2 +1,3 @@
 /target
+/target/release/!auth.exe
 /migration/target

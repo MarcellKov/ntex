@@ -35,7 +35,7 @@ pub async fn auth(req: HttpRequest) -> HttpResponse {
 }
 
 pub async fn fallback() -> impl web::Responder {
-    HttpResponse::Ok().body("<h2>Please log in order to use the page<h2>")
+    HttpResponse::Ok().json(&MSG { msg: "Please log in".to_string() })
 }
 
 pub async fn extractcookie(
