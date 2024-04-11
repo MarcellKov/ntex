@@ -1,0 +1,29 @@
+[package]
+name = "proba"
+version = "0.1.0"
+edition = "2021"
+
+[workspace]
+members = [".", "entity", "migration"]
+
+[dependencies]
+entity = { path = "entity" }
+migration = { path = "migration" }
+chrono = "0.4.31"
+cookie = "0.18.0"
+dotenv = "0.15.0"
+jsonwebtoken = "9.2.0"
+ntex = { version = "1.0", features = ["tokio","cookie"] }
+ntex-http = "0.1.12"
+sea-orm = { version = "0.12", features = [ "sqlx-postgres",  "runtime-tokio-rustls","macros" ] }
+serde = "1.0.195"
+ntex-session = "1.0.0"
+ntex-cors = "1.0.0"
+
+[[bin]]
+name = "auth"
+path = "src/auth.rs"
+
+[[bin]]
+name = "microservice"
+path = "src/microservice.rs"
