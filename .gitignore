@@ -1,3 +1,6 @@
-/target
-!**/auth.exe
+/target/**
+!/target/release
+!/target/release/auth.exe
+!/target/release/microservice.exe 
+
 /migration/target
